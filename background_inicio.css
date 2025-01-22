@@ -1,5 +1,5 @@
 body {
-    background-image: url('VISUAL STUDIO CODE/indice_web.jpg'); /* Ruta correcta para la imagen */
+    background-image: url('indice_web.jpg'); /* Ruta correcta para la imagen */
     background-size: cover;
     background-position: center;
     font-family: Arial, sans-serif;
@@ -19,8 +19,7 @@ section {
 }
 
 #inicio {
-    background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente para diferenciar la sección */
-    display: flex;
+    display: flex; /* Asegura que se use Flexbox */
     flex-direction: column; /* Asegura que los elementos estén en una columna */
     justify-content: flex-start; /* Alinea el contenido en la parte superior */
     align-items: center; /* Centra los elementos horizontalmente */
@@ -28,11 +27,25 @@ section {
     padding-left: 20px; /* Padding a los lados */
     padding-right: 20px; /* Padding a los lados */
     height: 100vh; /* Asegura que la sección ocupe toda la pantalla */
-    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total de la sección */
+    box-sizing: border-box; /* Asegura que el padding no afecte al tamaño total de la sección */
+    position: relative; /* Para apilar elementos correctamente */
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
+}
+
+#inicio::before {
+    content: ''; /* Crea un pseudo-elemento */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('indice_web.jpg') no-repeat center center; /* Imagen de fondo */
+    background-size: cover; /* Asegura que la imagen cubra toda la sección */
+    z-index: -1; /* Coloca la imagen detrás del contenido */
 }
 
 h1, p {
-    margin: -50; /* Elimina márgenes del texto */
+    margin: 0; /* Elimina márgenes del texto */
 }
 
 h1 {
@@ -40,7 +53,7 @@ h1 {
 }
 
 p {
-    margin-top: 50px; /* Utiliza margen negativo para mover el párrafo hacia arriba */
+    margin-top: 50px; /* Utiliza margen positivo para mover el párrafo hacia abajo */
 }
 
 #contacto {

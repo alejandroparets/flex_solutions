@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portada Profesional</title>
+    <title>Flex_solutions</title>
     <!-- Enlace a Bootstrap para estilos -->
     <!-- Enlace a Bootstrap para estilos -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
@@ -42,7 +42,6 @@
         }
 
         #inicio {
-            background-color: #f4f4f4;
             background-image: url('images/indice_web.jpg'); /* Ruta relativa de la imagen */
             background-size: cover;
             color: black;
@@ -93,34 +92,64 @@
         <!-- Sección de Inicio -->
         <section id="inicio">
             <div>
-                <h1>Bienvenido a Flex_solutions</h1>
-                <p>Explora mis servicios y conoce más sobre mí.</p>
+                <h1>Flex_solutions</h1>
+                <p>Ofrecemos una gama de servicios diseñados para impulsar tu negocio en el entorno digital. En Redacción y Traducción, creamos contenidos en inglés y español, con traducción precisa y localización cultural adecuada para maximizar el impacto en diferentes mercados. En Desarrollo Web, diseñamos y desarrollamos páginas web personalizadas, optimizadas para SEO, mejorando tu visibilidad online y creando tendencias innovadoras. Si necesitas Recepción de Paquetería, gestionamos el almacenaje y entrega de paquetes con precios competitivos y eficiencia. Nuestro Soporte Virtual incluye servicios administrativos, atención al cliente y gestión de redes sociales, permitiéndote optimizar tus recursos. En Marketing Digital, desarrollamos campañas publicitarias en Google Ads, Facebook e Instagram para aumentar tu presencia y generar conversiones efectivas. Además, ofrecemos Capacitación en herramientas digitales como Google Workspace y Microsoft Office, brindando a tu equipo las habilidades necesarias para ser más productivo. Nuestro enfoque integral y personalizado garantiza soluciones profesionales para cada aspecto de tu negocio.</p>
             </div>
         </section>
     
-        <!-- Sección de Contacto -->
-        <section id="contacto" class="py-5 mt-5">
-            <div class="container">
-                <h2 class="text-center mb-4">Contacto</h2>
-                <form action="https://formspree.io/f/{tu-email}" method="POST">
-                    <div class="row">
-                        <div class="col-md-6 mb-3">
-                            <label for="nombre" class="form-label">Nombre</label>
-                            <input type="text" class="form-control" id="nombre" name="nombre" required>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <label for="email" class="form-label">Correo Electrónico</label>
-                            <input type="email" class="form-control" id="email" name="email" required>
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <label for="mensaje" class="form-label">Mensaje</label>
-                        <textarea class="form-control" id="mensaje" name="mensaje" rows="4" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Enviar</button>
-                </form>
+<!-- Sección de Contacto -->
+<section id="contacto" class="py-5 mt-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Contacto</h2>
+        <form action="https://formspree.io/f/{tu-email}" method="POST">
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="email" class="form-label">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="telefono" class="form-label">Teléfono</label>
+                    <input 
+                        type="tel" 
+                        class="form-control" 
+                        id="telefono" 
+                        name="telefono" 
+                        placeholder="Ej: +34 912345678" 
+                        pattern="^\+?[0-9\s\-]{7,15}$" 
+                        required
+                    >
+                    <small class="form-text text-muted">
+                        Ingresa un número válido, como +34 912345678.
+                    </small>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="url" class="form-label">URL</label>
+                    <input 
+                        type="url" 
+                        class="form-control" 
+                        id="url" 
+                        name="url" 
+                        placeholder="Ej: https://www.ejemplo.com" 
+                        required
+                    >
+                    <small class="form-text text-muted">
+                        Ingresa un enlace válido, como https://www.ejemplo.com.
+                    </small>
+                </div>
             </div>
-        </section>
+            <div class="mb-3">
+                <label for="mensaje" class="form-label">Mensaje</label>
+                <textarea class="form-control" id="mensaje" name="mensaje" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </div>
+</section>
+
         <!-- Resto de tu HTML -->
     
         <!-- Scripts de Bootstrap -->
