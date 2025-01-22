@@ -1,0 +1,26 @@
+body {
+    background-image: url('VISUAL STUDIO CODE\indice_web.jpg'); /* Ruta de la imagen */
+    background-size: cover; /* Hace que la imagen cubra toda la pantalla */
+    background-position: center; /* Centra la imagen en la pantalla */
+    font-family: Arial, sans-serif;
+    height: 100vh; /* Asegura que el body tenga la altura completa de la pantalla */
+    display: flex; /* Usamos flexbox para alinear el contenido */
+    flex-direction: column; /* Alinea el contenido en columna */
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+    color: white; /* El color del texto será blanco para resaltar sobre la imagen */
+    text-align: center; /* Centra el texto */
+    padding: 20px; /* Agrega un poco de espacio alrededor */
+}
+
+h1 {
+    font-size: 3em; /* Tamaño grande para el título */
+    margin-bottom: 0.5em; /* Espacio debajo del título */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra al texto */
+}
+
+h2 {
+    font-size: 1.5em; /* Tamaño mediano para el subtítulo */
+    font-weight: normal; /* Menos peso en el subtítulo */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); /* Sombra al subtítulo */
+}
