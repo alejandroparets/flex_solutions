@@ -1,0 +1,90 @@
+/* Estilos generales para todas las secciones */
+section {
+    background-color: #e0e0e0; /* Color de fondo por defecto */
+    border: 2px solid #ccc; /* Bordes en todas las secciones */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 30px 10px; /* Espaciado interno */
+    margin: 20px auto; /* Margen externo */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+    transition: background-color 0.3s, transform 0.3s; /* Efecto de transición */
+}
+/* Estilo específico para la sección de inicio */
+#inicio {
+    background-image: url('images/indice_web.jpg'); /* Imagen de fondo específica */
+    background-size: cover; /* Cubrir todo el espacio disponible */
+    background-position: center; /* Centrar la imagen */
+    color: white; /* Texto en blanco */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8); /* Sombra para el texto */
+    height: 180vh; /* Altura ajustada */
+    display: flex; /* Centrar contenido vertical y horizontalmente */
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em; /* Tamaño de fuente más grande */
+}
+
+/* Estilo específico para la sección de contacto */
+#contacto {
+    background-color: #f4f8fa; /* Fondo claro y limpio */
+    border-left: 5px solid #007bff; /* Borde izquierdo destacado */
+}
+
+/* Botones dentro de las secciones */
+section .btn {
+    background-color: #007bff; /* Fondo azul */
+    color: white; /* Texto blanco */
+    border: none; /* Sin bordes */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 20px;
+    font-size: 15px;
+    transition: background-color 0.3s, transform 0.3s; /* Efecto de transición */
+}
+
+/* Títulos dentro de las secciones */
+section h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+    text-transform: uppercase; /* Texto en mayúsculas */
+    letter-spacing: 1px; /* Espaciado entre letras */
+    border-bottom: 3px solid #007bff; /* Línea decorativa debajo del título */
+    display: inline-block; /* Ajusta el ancho al texto */
+    padding-bottom: 5px; /* Espaciado inferior */
+}
+/* Para modificar area de comentario */
+section form .form-control {
+    border: 1px solid #aaa; /* Reduce el grosor del borde */
+    border-radius: 5px;
+    padding: 5px 8px; /* Espaciado interno más pequeño */
+    font-size: 14px; /* Texto más pequeño */
+    max-width: 100%; /* Ajusta el ancho máximo (porcentaje del contenedor) */
+}
+
+/* Para el área de comentarios específicamente */
+section form textarea.form-control {
+    height: 80px; /* Altura más pequeña */
+    resize: vertical; /* Permite cambiar tamaño solo verticalmente */
+}
+
+/* Efecto al enfocar campos de formulario */
+section form .form-control:focus {
+    border-color: #007bff; /* Cambia a azul al enfocar */
+    outline: none; /* Elimina el contorno predeterminado */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Sombra azul */
+}
+
+/* Etiquetas dentro del formulario */
+section form label {
+    font-weight: bold;
+    color: #555;
+}
+
+/* Estilo para el logo de la navbar */
+.logo-navbar {
+    max-height: 42.5px; /* 25% menos de 50px */
+    height: auto; /* Mantiene la proporción del logo */
+}
+
+.navbar .navbar-brand:hover {
+    background-color: transparent; /* Eliminar cualquier cambio de fondo en el hover */
+}
+
