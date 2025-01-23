@@ -1,0 +1,66 @@
+/* Estilo para el logo de la navbar */
+.logo-navbar {
+    max-height: 50px; /* 25% menos de 50px */
+    height: auto; /* Mantiene la proporción del logo */
+}
+/*QUITAR EFECTO HOVER AL LOGO DE BARRA SUPERIOR*/
+.navbar .navbar-brand:hover {
+    background-color: transparent; /* Eliminar cualquier cambio de fondo en el hover */
+}
+
+/* Barra superior */
+.navbar {
+    display: flex; /* Usamos flexbox para organizar los elementos en la barra */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Alinea los elementos verticalmente */
+    position: fixed; /* Hace que la barra se quede fija en la parte superior */
+    top: 0; /* Posición fija en la parte superior */
+    left: 0; /* Se asegura de que la barra ocupe todo el ancho */
+    width: 100%; /* Asegura que la barra ocupe todo el ancho de la pantalla */
+    height: 60px; /* Ajusta la altura de la barra */
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
+    z-index: 1000; /* Asegura que esté sobre otros elementos */
+    box-sizing: border-box; /* Asegura que el padding no afecte al tamaño total de la barra */
+    padding: 10px 20px; /* Espaciado interior de la barra */
+}
+/* Estilos sección sservicios (CAJAS DE CONTENIDO) #inicio */
+h1, p {
+    margin: 60px; /* Elimina márgenes del texto */
+}
+
+h1 {
+    margin-top: -10px; /* Mueve el título 20px más arriba */
+}
+
+p {
+    margin-top: 10px; /* Mueve el párrafo más cerca del título */
+}
+/* Estilo para las secciones generales - BAJA TODOS LOS ELEMENTOS DE INICIO*/
+section {
+    min-height: 100vh; /* Asegura que cada sección ocupe toda la altura de la pantalla */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    color: black; /* Cambiar si el fondo requiere más contraste */
+}
+/* Estilo base para las tarjetas de servicios */
+#servicios .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none; /* Elimina los bordes predeterminados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera por defecto */
+}
+
+/* Efecto hover en las tarjetas */
+#servicios .card:hover {
+    transform: translateY(-10px); /* Eleva la tarjeta */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
+
+/* Efecto en el título de la tarjeta */
+#servicios .card:hover .card-title {
+    color: #007bff; /* Cambia el color del título al azul */
+    transition: color 0.3s ease;
+}

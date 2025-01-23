@@ -1,0 +1,6 @@
+.foto-reducida {
+    width: 100px; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 100%; /* Hace la imagen redonda (opcional) */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.055); /* Sombra sutil */
+}

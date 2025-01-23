@@ -1,113 +1,95 @@
-/* Estilos generales */
-body {
-    background-image: url('indice_web.jpg'); /* Ruta correcta para la imagen */
-    background-size: cover;
-    background-position: center;
-    font-family: Arial, sans-serif;
-    min-height: 100vh; /* Se cambia height a min-height para evitar conflicto con el scroll */
-    margin: 0;
-}
-
-/* Estilo para el logo de la navbar */
-.logo-navbar {
-    max-height: 37.5px; /* 25% menos de 50px */
-    height: auto; /* Mantiene la proporción del logo */
-}
-
-/* Estilo para las secciones generales */
-section {
-    min-height: 100vh; /* Asegura que cada sección ocupe toda la altura de la pantalla */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-    color: black; /* Cambiar si el fondo requiere más contraste */
-}
-
-/* Estilos específicos para la sección #inicio */
-#inicio {
-    display: flex; /* Asegura que se use Flexbox */
-    flex-direction: column; /* Asegura que los elementos estén en una columna */
-    justify-content: flex-start; /* Alinea el contenido en la parte superior */
-    align-items: center; /* Centra los elementos horizontalmente */
-    padding-top: 20px; /* Reduce el padding superior para permitir más espacio */
-    padding-left: 20px; /* Padding a los lados */
-    padding-right: 20px; /* Padding a los lados */
-    height: 100vh; /* Asegura que la sección ocupe toda la pantalla */
-    box-sizing: border-box; /* Asegura que el padding no afecte al tamaño total de la sección */
-    position: relative; /* Para apilar elementos correctamente */
-    background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
-}
-
-/* Estilo para el logo en la sección de inicio */
-.logo-inicio {
-    max-width: 200px; /* Ajusta el tamaño máximo según lo que necesites */
-    height: auto; /* Mantiene la proporción de la imagen */
-    margin: -10px auto; /* Mueve el logo 30px hacia arriba desde la parte superior */
-    display: block; /* Hace que la imagen se comporte como un bloque, permitiendo el centrado */
-}
-
-/* Estilos para el fondo de la sección #inicio */
-#inicio::before {
-    content: ''; /* Crea un pseudo-elemento */
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('indice_web.jpg') no-repeat center center; /* Imagen de fondo */
-    background-size: cover; /* Asegura que la imagen cubra toda la sección */
-    z-index: -1; /* Coloca la imagen detrás del contenido */
-}
-
-/* Estilos para el título y el párrafo de la sección #inicio */
-h1, p {
-    margin: 60px; /* Elimina márgenes del texto */
-}
-
-h1 {
-    margin-top: -10px; /* Mueve el título 20px más arriba */
-}
-
-p {
-    margin-top: 40px; /* Mueve el párrafo más cerca del título */
-}
-
-/* Estilo para la sección #contacto */
-#contacto {
-    background-color: #f0f0f0; /* Cambia según tus preferencias */
-}
-
-/* Estilos para la sección #sobre-mi */
-#sobre-mi {
-    background-color: rgba(0, 0, 0, 0.618); /* Fondo negro para la sección sobre mí */
-    color: rgb(0, 0, 0); /* Cambia el texto a blanco para asegurar contraste */
-    padding: 20px; /* Añade padding para separar el contenido de los bordes */
-}
-
-/* Estilo para el contenido en la sección #sobre-mi */
-.contenido {
-    display: flex;
-    align-items: center; /* Centra los elementos verticalmente */
-    justify-content: center; /* Centra los elementos horizontalmente */
-}
-
-/* Estilos para la imagen en la sección #sobre-mi */
-.foto {
-    margin-right: 20px; /* Espacio entre la imagen y el texto */
-}
-
-.foto-reducida {
-    width: 100px; /* Ajusta el tamaño de la imagen */
-    height: auto; /* Mantiene la proporción de la imagen */
-    border-radius: 100%; /* Hace la imagen redonda (opcional) */
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.055); /* Sombra sutil */
-}
-
-/* Estilos para el texto dentro de la sección #sobre-mi */
-.texto p {
-    font-size: 18px; /* Ajusta el tamaño del texto */
-}
-
+<style>
+    /* Barra superior */
+    .navbar {
+        display: flex; /* Usamos flexbox para organizar los elementos en la barra */
+        justify-content: center; /* Centra el contenido horizontalmente */
+        align-items: center; /* Alinea los elementos verticalmente */
+        position: fixed; /* Hace que la barra se quede fija en la parte superior */
+        top: 0; /* Posición fija en la parte superior */
+        left: 0; /* Se asegura de que la barra ocupe todo el ancho */
+        width: 80%; /* Asegura que la barra ocupe todo el ancho de la pantalla */
+        height: 50px; /* Ajusta la altura de la barra */
+        background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
+        z-index: 1000; /* Asegura que esté sobre otros elementos */
+        box-sizing: border-box; /* Asegura que el padding no afecte al tamaño total de la barra */
+        padding: 10px 20px; /* Espaciado interior de la barra */
+    }
+    /* LOGO */
+    .navbar .navbar-brand:hover {
+        background-color: transparent; /* Eliminar cualquier cambio de fondo en el hover */
+    }
+    /* Tamaño del logo de la navbar */
+    .logo-navbar {
+        max-height: 50px; /* Ajuste de altura máximo */
+        height: auto; /* Mantiene la proporción del logo */
+    }
+    <style>
+    /* Efectos de fondo para la sección de inicio */
+    #inicio {
+        position: relative; /* Necesario para usar un pseudo-elemento */
+        background-color: #fff7f7;
+        background-image: url('img1.jpg'); /* Ruta relativa de la imagen */
+        background-size: cover; /* Hace que la imagen cubra todo el fondo */
+        background-position: center; /* Centra la imagen de fondo */
+        background-attachment: fixed; /* Fija la imagen de fondo para que no se mueva al hacer scroll */
+        background-repeat: no-repeat; /* Evita que la imagen se repita */
+        color: white; /* Cambia el color del texto a blanco */
+        height: 100vh; /* Ajusta el alto al tamaño de la pantalla */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center; /* Centra el texto en el contenedor */
+        text-transform: uppercase; /* Convierte el texto a mayúsculas */
+        opacity: 0; /* Inicialmente el contenido es invisible */
+        transition: opacity 1s ease-in-out; /* Define la duración de la transición de opacidad */
+    }
+    /* Cuando la sección entra en vista, se hace visible */
+    #inicio.in-view {
+        opacity: 1; /* Hace visible el contenido */
+    }
+    /* Estilo para el texto */
+    #inicio h1, #inicio p {
+        font-size: 4rem; /* Aumenta el tamaño de la fuente */
+        font-weight: bold; /* Hace que el texto sea más grueso */
+        text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5); /* Agrega sombra para mayor visibilidad */
+        letter-spacing: 5px; /* Aumenta el espacio entre las letras */
+        line-height: 1.3; /* Ajusta la altura de línea para mejorar la legibilidad */
+    }
+    /* Capa semitransparente sobre la imagen */
+    #inicio::before {
+        content: ''; /* Necesario para que se muestre el pseudo-elemento */
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(255, 255, 255, 0.5); /* Fondo blanco semitransparente */
+        z-index: -1; /* Coloca la capa detrás del contenido */
+    }
+</style>
+<script>
+    // Detectar cuando la sección entra en vista y activar la transición
+    document.addEventListener('DOMContentLoaded', function() {
+        const section = document.getElementById('inicio');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    section.classList.add('in-view');
+                }
+            });
+        }, { threshold: 0.5 }); // Detecta cuando el 50% de la sección está en vista
+        observer.observe(section);
+    });
+</script>
+    /* Capa semitransparente sobre la imagen */
+    #inicio::before {
+        content: ''; /* Necesario para que se muestre el pseudo-elemento */
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(255, 255, 255, 0.5); /* Fondo blanco semitransparente */
+        z-index: -1; /* Coloca la capa detrás del contenido */
+    }
+</style>
