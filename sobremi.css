@@ -4,3 +4,62 @@
     border-radius: 100%; /* Hace la imagen redonda (opcional) */
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.055); /* Sombra sutil */
 }
+/* Estilo para el logo de la navbar */
+.logo-navbar {
+    max-height: 42.5px; /* 25% menos de 50px */
+    height: auto; /* Mantiene la proporción del logo */
+}
+/*QUITAR EFECTO HOVER AL LOGO DE BARRA SUPERIOR*/
+.navbar .navbar-brand:hover {
+    background-color: transparent; /* Eliminar cualquier cambio de fondo en el hover */
+}
+/* Estilo para las secciones generales - BAJA TODOS LOS ELEMENTOS DE INICIO*/
+section {
+    min-height: 100vh; /* Asegura que cada sección ocupe toda la altura de la pantalla */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    color: black; /* Cambiar si el fondo requiere más contraste */
+}
+/* Barra superior */
+.navbar {
+    display: flex; /* Usamos flexbox para organizar los elementos en la barra */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Alinea los elementos verticalmente */
+    position: fixed; /* Hace que la barra se quede fija en la parte superior */
+    top: 0; /* Posición fija en la parte superior */
+    left: 0; /* Se asegura de que la barra ocupe todo el ancho */
+    width: 100%; /* Asegura que la barra ocupe todo el ancho de la pantalla */
+    height: 50px; /* Ajusta la altura de la barra */
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
+    z-index: 1000; /* Asegura que esté sobre otros elementos */
+    box-sizing: border-box; /* Asegura que el padding no afecte al tamaño total de la barra */
+    padding: 10px 20px; /* Espaciado interior de la barra */
+}
+/* Estilos para el título y el párrafo de la sección #inicio */
+h1, p {
+    margin: 60px; /* Elimina márgenes del texto */
+}
+
+h1 {
+    margin-top: -10px; /* Mueve el título 20px más arriba */
+}
+
+p {
+    margin-top: 40px; /* Mueve el párrafo más cerca del título */
+}
+/* Estilos para el fondo de la sección #inicio */
+#inicio::before {
+    content: ''; /* Crea un pseudo-elemento */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('oficina.jpg') no-repeat center center; /* Imagen de fondo */
+    background-size: cover; /* Asegura que la imagen cubra toda la sección */
+    z-index: -1; /* Coloca la imagen detrás del contenido */
+}
