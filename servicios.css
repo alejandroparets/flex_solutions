@@ -64,3 +64,10 @@ section {
     color: #007bff; /* Cambia el color del título al azul */
     transition: color 0.3s ease;
 }
+.card-body p {
+    margin-bottom: 0.5rem; /* Reduce el espacio debajo del texto */
+}
+
+.card-body .btn {
+    margin-top: 0.5rem; /* Reduce el espacio superior del botón */
+}
