@@ -5,14 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flex_solutions</title>
     <!-- Enlace a Bootstrap para estilos -->
-    <!-- Enlace a Bootstrap para estilos -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <!-- Enlace a tu archivo CSS personalizado -->
-    <link rel="stylesheet" type="text/css" href="sobremi.css">
     <style>
         body {
             margin: 0;
             padding: 0;
+            font-family: 'Arial', sans-serif;
         }
 
         .navbar {
@@ -22,6 +20,7 @@
             right: 0;
             background-color: #333;
             z-index: 999;
+            height: 10vh;
         }
 
         .navbar a {
@@ -33,6 +32,7 @@
 
         .navbar a:hover {
             background-color: #575757;
+            transition: background-color 0.3s ease;
         }
 
         section {
@@ -40,20 +40,52 @@
             height: 100vh;
             text-align: center;
         }
-
-        #inicio {
-            background-image: url('oficina.jpg'); /* Ruta relativa de la imagen */
-            background-size: cover;
-            color: black;
-            height: 150vh; /* Ajusta el alto al tamaño de la pantalla */
+        #sobre-mi {
+            background: linear-gradient(135deg, #f0f0f0, #c9d6ff); /* Degradado moderno */
+            background-image: url(oficina.jpg);
+            margin-top: 0px;
             display: flex;
             justify-content: center;
             align-items: center;
-            text-align: upper;
+            color: #333;
         }
-        #sobre-mi {
-            background-color: #e0e0e0;
-            margin-top: 0px;
+
+        .contenido {
+            display: flex;
+            align-items: center;
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.9); /* Fondo semi-transparente */
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+        }
+
+        .foto img {
+            border-radius: 50%; /* Foto redonda */
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border: 5px solid #fff; /* Borde blanco */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+        }
+
+        .texto {
+            margin-left: 40px;
+            text-align: left;
+            max-width: 700px;
+        }
+
+        .texto p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #797272ab;
+        }
+
+        h2 {
+            font-size: 34px;
+            margin-bottom: 20px;
+            color: #ffffff;
         }
 
         .navbar a.active {
@@ -70,7 +102,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark">
         <a class="navbar-brand" href="#">
-            <img src="logo1 (1).png" alt="Logo" class="logo-navbar">
+            <img src="logo1 (1).png" alt="Logo" class="logo-navbar" style="height: 45px;">
         </a>
         <div class="collapse navbar-collapse">
             <ul class="navbar-nav ml-auto">
@@ -81,18 +113,20 @@
             </ul>
         </div>
     </nav>
-<section id="sobre-mi">
-    <h2>Sobre mí</h2>
-    <div class="contenido">
-        <div class="foto">
-            <img src="foto4.png" alt="Foto sobre mí" class="foto-reducida" />
+    <section id="sobre-mi">
+        <h2>Sobre mí</h2>
+        <div class="contenido">
+            <div class="foto">
+                <img src="foto4.png" alt="Foto sobre mí" />
+            </div>
+            <div class="texto">
+                <p>
+                    Soy estudiante de Administración, con un enfoque en la gestión de negocios. Además, estoy estudiando desarrollo en páginas web y tengo experiencia creando sitios interactivos y funcionales. Actualmente, estoy realizando mi primer emprendimiento para implementar todos mis conocimientos en un proyecto que alberga mucha ilusión.
+                </p>
+            </div>
         </div>
-        <div class="texto">
-            <p>
-                Soy estudiante de Administración, con un enfoque en la gestión de negocios. Además, estoy estudiando desarrollo en páginas web y tengo experiencia creando sitios interactivos y funcionales. Actualmente, estoy realizando mi primer emprendimiento para implementar todos mis conocimientos en un proyecto que alberga mucha ilusión.
-            </p>
-        </div>
-    </div>
+    </section>
+
     <!-- Scripts de Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 

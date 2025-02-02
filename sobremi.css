@@ -1,12 +1,12 @@
 .foto-reducida {
     width: 100px; /* Ajusta el tamaño de la imagen */
     height: auto; /* Mantiene la proporción de la imagen */
-    border-radius: 100%; /* Hace la imagen redonda (opcional) */
+    border-radius: 80%; /* Hace la imagen redonda (opcional) */
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.055); /* Sombra sutil */
 }
 /* Estilo para el logo de la navbar */
 .logo-navbar {
-    max-height: 42.5px; /* 25% menos de 50px */
+    max-height: 35.5px; /* 25% menos de 50px */
     height: auto; /* Mantiene la proporción del logo */
 }
 /*QUITAR EFECTO HOVER AL LOGO DE BARRA SUPERIOR*/
@@ -33,7 +33,7 @@ section {
     top: 0; /* Posición fija en la parte superior */
     left: 0; /* Se asegura de que la barra ocupe todo el ancho */
     width: 100%; /* Asegura que la barra ocupe todo el ancho de la pantalla */
-    height: 50px; /* Ajusta la altura de la barra */
+    height: 30px; /* Ajusta la altura de la barra */
     background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
     z-index: 1000; /* Asegura que esté sobre otros elementos */
     box-sizing: border-box; /* Asegura que el padding no afecte al tamaño total de la barra */
