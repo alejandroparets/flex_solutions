@@ -3,16 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Flex Solutions ofrece servicios de redacción, traducción, desarrollo web, recepción de paquetería, soporte virtual, marketing digital y capacitación.">
+    <meta name="keywords" content="redacción, traducción, desarrollo web, paquetería, soporte virtual, marketing digital, capacitación">
+    <meta name="author" content="Flex Solutions">
     <title>Flex_solutions</title>
-    <!-- Enlace a Bootstrap para estilos -->
     <!-- Enlace a Bootstrap para estilos -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
     <!-- Enlace a tu archivo CSS personalizado -->
     <link rel="stylesheet" type="text/css" href="servicios.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
     <style>
         body {
             margin: 0;
             padding: 0;
+            padding-top: 70px; /* Añade padding-top para evitar que el contenido quede detrás del navbar */
         }
 
         .navbar {
@@ -21,7 +25,7 @@
             left: 0;
             right: 0;
             background-color: #333;
-            z-index: 999;
+            z-index: 1000; /* Asegúrate de que el z-index sea alto */
         }
 
         .navbar a {
@@ -36,20 +40,15 @@
         }
 
         section {
-    padding-top: 20px;
-    padding-right: 20px;
-    padding-bottom: 20px;
-    padding-left: 20px;
-    height: 100vh;
-    text-align: center;
-}
-
-
+            padding: 20px;
+            height: 100vh;
+            text-align: center;
+        }
         #servicios {
             background-color: #d9d9d9;
-            margin-top: 0px;
-            margin-bottom: 0px;
+            background-image: url(img2.jpg);
         }
+
         .navbar a.active {
             background-color: #007bff;
         }
@@ -57,111 +56,175 @@
         .btn {
             margin-top: 20px;
             padding: 10px 20px;
-            font-size: 16px;
+            font-size: 12px;
+        }
+
+        .card {
+            transform: scale(0.9);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card:hover {
+            transform: scale(0.95);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        .btn {
+            font-size: 0.7rem;
+            padding: 8px 16px;
+            border-radius: 5px;
+        }
+
+        :root {
+            --primary-color: #007bff;
+            --secondary-color: #6c757d;
+            --background-color: #f8f9fa;
+        }
+
+        body {
+            background-color: var(--background-color);
+        }
+
+        .navbar {
+            background-color: var(--primary-color);
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #004085;
         }
     </style>
 </head>
 <body>
-        <!-- Sección Barra Superior -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <a class="navbar-brand" href="#">
-            <img src="logo1 (1).png" alt="Logo" class="logo-navbar">
-        </a>
-        <div class="collapse navbar-collapse">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a class="nav-link" href=" index.html">Inicio</a></li>
-                <li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
-                <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
-                <li class="nav-item"><a class="nav-link" href="Sobremí.html">Sobre mí</a></li>
-            </ul>
+    <!-- Sección Barra Superior -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="logo1 (1).png" alt="Logo" class="logo-navbar" style="height: 40px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Sobremí.html">Sobre mí</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
-    <style>
-        .card {
-            transform: scale(0.9); /* Reduce el tamaño un 10% */
-        }
-        .card-body {
-            padding: 1rem;
-        }
-        .btn {
-            font-size: 0.8rem; /* Reduce el tamaño del botón */
-            padding: 6px 12px;
-        }
-    </style>
-    <!-- Sección Servicios -->
-    <section id="servicios" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-5">Servicios</h2>
-            <div class="row mb-4">
-                <!-- Tarjeta 1 -->
-                <div class="col-md-4">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title">Redacción y Traducción</h5>
-                            <p class="card-text">Creación de contenidos en inglés y español, con traducción y localización culturalmente adecuada.</p>
-                            <a href="redaccion.html" class="btn btn-primary">Ver más</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Tarjeta 2 -->
-                <div class="col-md-4">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title">Desarrollo Web</h5>
-                            <p class="card-text">Diseño y desarrollo de páginas web personalizadas, optimización SEO y creación de tiendas online.</p>
-                            <a href="desarrollo-web.html" class="btn btn-primary">Ver más</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Tarjeta 3 -->
-                <div class="col-md-4">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title">Recepción de Paquetería</h5>
-                            <p class="card-text">Gestión de almacenaje y entrega de paquetes con precios competitivos.</p>
-                            <a href="paqueteria.html" class="btn btn-primary">Ver más</a>
-                        </div>
+
+<!-- Sección Servicios -->
+<section id="servicios" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-4" style="font-size: 1.1rem;">Servicios</h2>
+        <div class="row mb-3">
+            <!-- Tarjeta 1 -->
+            <div class="col-md-4">
+                <div class="card h-100" style="font-size: 0.75rem;">
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-size: 0.75rem;">Redacción y Traducción</h5>
+                        <p class="card-text">Creación de contenidos en inglés y español, con traducción y localización culturalmente adecuada.</p>
+                        <a href="Traducción.html" class="btn btn-primary btn-sm">Ver más</a>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <!-- Tarjeta 4 -->
-                <div class="col-md-4">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title">Soporte Virtual</h5>
-                            <p class="card-text">Gestión administrativa, atención al cliente y manejo de redes sociales.</p>
-                            <a href="soporte-virtual.html" class="btn btn-primary">Ver más</a>
-                        </div>
+            <!-- Tarjeta 2 -->
+            <div class="col-md-4">
+                <div class="card h-100" style="font-size: 0.75rem;">
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-size: 0.75rem;">Desarrollo Web</h5>
+                        <p class="card-text">Diseño y desarrollo de páginas web personalizadas, optimización SEO y creación de tiendas online.</p>
+                        <a href="desarrollo-web.html" class="btn btn-primary btn-sm">Ver más</a>
                     </div>
                 </div>
-                <!-- Tarjeta 5 -->
-                <div class="col-md-4">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title">Marketing Digital</h5>
-                            <p class="card-text">Creación y gestión de campañas publicitarias en Google Ads, Facebook e Instagram.</p>
-                            <a href="marketing-digital.html" class="btn btn-primary">Ver más</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Tarjeta 6 -->
-                <div class="col-md-4">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title">Capacitación</h5>
-                            <p class="card-text">Formación en herramientas digitales como Google Workspace y Microsoft Office.</p>
-                            <a href="capacitacion.html" class="btn btn-primary">Ver más</a>
-                        </div>
+            </div>
+            <!-- Tarjeta 3 -->
+            <div class="col-md-4">
+                <div class="card h-100" style="font-size: 0.75rem;">
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-size: 0.75rem;">Recepción de Paquetería</h5>
+                        <p class="card-text">Gestión de almacenaje y entrega de paquetes con precios competitivos.</p>
+                        <a href="paqueteria.html" class="btn btn-primary btn-sm">Ver más</a>
                     </div>
                 </div>
             </div>
         </div>
-    </section>    
+        <div class="row">
+            <!-- Tarjeta 4 -->
+            <div class="col-md-4">
+                <div class="card h-100" style="font-size: 0.75rem;">
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-size: 0.75rem;">Soporte Virtual</h5>
+                        <p class="card-text">Gestión administrativa, atención al cliente y manejo de redes sociales.</p>
+                        <a href="soporte-virtual.html" class="btn btn-primary btn-sm">Ver más</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Tarjeta 5 -->
+            <div class="col-md-4">
+                <div class="card h-100" style="font-size: 0.75rem;">
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-size: 0.75rem;">Marketing Digital</h5>
+                        <p class="card-text">Creación y gestión de campañas publicitarias en Google Ads, Facebook e Instagram.</p>
+                        <a href="marketing-digital.html" class="btn btn-primary btn-sm">Ver más</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Tarjeta 6 -->
+            <div class="col-md-4">
+                <div class="card h-100" style="font-size: 0.75rem;">
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-size: 0.75rem;">Capacitación</h5>
+                        <p class="card-text">Formación en herramientas digitales como Google Workspace y Microsoft Office.</p>
+                        <a href="capacitacion.html" class="btn btn-primary btn-sm">Ver más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-2">
+        <div class="container">
+            <p>&copy; 2023 Flex Solutions. Todos los derechos reservados.</p>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#" class="text-white">Política de Privacidad</a></li>
+                <li class="list-inline-item"><a href="#" class="text-white">Términos de Servicio</a></li>
+                <li class="list-inline-item"><a href="#" class="text-white">Contacto</a></li>
+            </ul>
+        </div>
+    </footer>
+
     <!-- Scripts de Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
         window.addEventListener('scroll', function() {
             var sections = document.querySelectorAll('section');
             var links = document.querySelectorAll('.navbar-nav .nav-link');

@@ -25,6 +25,7 @@ section {
 /* Estilo específico para la sección de contacto */
 #contacto {
     background-color: #f4f8fa; /* Fondo claro y limpio */
+    background-size: cover;
     border-left: 5px solid #007bff; /* Borde izquierdo destacado */
 }
 

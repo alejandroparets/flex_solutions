@@ -71,3 +71,9 @@ section {
 .card-body .btn {
     margin-top: 0.5rem; /* Reduce el espacio superior del botón */
 }
+/* Estilo específico para la sección de servicios */
+#servicios {
+    background-color: #f4f8fa; /* Fondo claro y limpio */
+    background-size: cover;
+    border-left: 5px solid #007bff; /* Borde izquierdo destacado */
+}

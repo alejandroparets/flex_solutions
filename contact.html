@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flex_solutions</title>
     <!-- Enlace a Bootstrap para estilos -->
-    <!-- Enlace a Bootstrap para estilos -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
     <!-- Enlace a tu archivo CSS personalizado -->
     <link rel="stylesheet" type="text/css" href="contact_section.css">
@@ -13,17 +12,19 @@
         body {
             margin: 0;
             padding: 0;
+            font-family: 'Arial', sans-serif;
         }
 
         .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: #333;
-    z-index: 999;
-    height: 60px; /* Ajusta la altura fija de la barra SUPERIOR EN LA WEB */
-}
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: #333;
+            z-index: 999;
+            height: 60px;
+        }
+
         .navbar a {
             color: white;
             padding: 20px 20px;
@@ -33,7 +34,7 @@
 
         .navbar a:hover {
             background-color: #575757;
-            transition: background-color 0.3s ease; /* Transición más suave */
+            transition: background-color 0.3s ease;
         }
 
         section {
@@ -43,10 +44,10 @@
         }
 
         #inicio {
-            background-image: url('images/indice_web.jpg'); /* Ruta relativa de la imagen */
+            background-image: url('images/indice_web.jpg');
             background-size: cover;
             color: black;
-            height: 150vh; /* Ajusta el alto al tamaño de la pantalla */
+            height: 150vh;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -54,12 +55,12 @@
         }
 
         #contacto {
-    background-color: #f0f0f0; /* Fondo claro */
-    margin-top: 180px; /* Margen superior */
-    height: 80vh; /* Altura ajustada al 80% del viewport */
-    padding: 30px 20px; /* Espaciado interno para mantener contenido accesible */
-}
-
+            background-image: url('libreta.jpg');
+            background-color: #f0f0f0;
+            margin-top: 180px;
+            height: 80vh;
+            padding: 30px 20px;
+        }
 
         .navbar a.active {
             background-color: #007bff;
@@ -70,6 +71,53 @@
             padding: 10px 20px;
             font-size: 16px;
         }
+
+        .form-control {
+            border-radius: 5px;
+            border: 1px solid #3f3f3f;
+            padding: 10px;
+            font-size: 14px;
+        }
+
+        .form-control:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+
+        .form-label {
+            font-weight: bold;
+            color: #4a4a4a;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .form-text {
+            font-size: 12px;
+            color: #434343;
+        }
+        
+
     </style>
 </head>
 <body>
@@ -86,58 +134,52 @@
             </ul>
         </div>
     </nav>
-<!-- Sección de Contacto -->
-<section id="contacto" class="py-5 mt-5">
-    <div class="container">
-        <h2 class="text-center mb-4">Contacto</h2>
-        <form action="https://formspree.io/f/{tu-email}" method="POST">
-            <div class="row">
-                <div class="col-md-6 mb-3">
-                    <label for="nombre" class="form-label">Nombre</label>
-                    <input type="text" class="form-control" id="nombre" name="nombre" required>
+    <!-- Sección de Contacto -->
+    <section id="contacto" class="py-5 mt-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Contacto</h2>
+            <form action="https://formspree.io/f/{tu-email}" method="POST">
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="email" class="form-label">Correo Electrónico</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="telefono" class="form-label">Teléfono</label>
+                        <input 
+                            type="tel" 
+                            class="form-control" 
+                            id="telefono" 
+                            name="telefono" 
+                            placeholder="Ej: +34 912345678" 
+                            pattern="^\+?[0-9\s\-]{7,15}$" 
+                            required
+                        >
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="url" class="form-label">URL</label>
+                        <input 
+                            type="url" 
+                            class="form-control" 
+                            id="url" 
+                            name="url" 
+                            placeholder="Ej: https://www.ejemplo.com" 
+                            required
+                        >
+                    </div>
                 </div>
-                <div class="col-md-6 mb-3">
-                    <label for="email" class="form-label">Correo Electrónico</label>
-                    <input type="email" class="form-control" id="email" name="email" required>
+                <div class="mb-4">
+                    <label for="mensaje" class="form-label">Mensaje</label>
+                    <textarea class="form-control" id="mensaje" name="mensaje" rows="4" required></textarea>
                 </div>
-                <div class="col-md-6 mb-3">
-                    <label for="telefono" class="form-label">Teléfono</label>
-                    <input 
-                        type="tel" 
-                        class="form-control" 
-                        id="telefono" 
-                        name="telefono" 
-                        placeholder="Ej: +34 912345678" 
-                        pattern="^\+?[0-9\s\-]{7,15}$" 
-                        required
-                    >
-                    <small class="form-text text-muted">
-                        Ingresa un número válido, como +34 912345678.
-                    </small>
-                </div>
-                <div class="col-md-6 mb-3">
-                    <label for="url" class="form-label">URL</label>
-                    <input 
-                        type="url" 
-                        class="form-control" 
-                        id="url" 
-                        name="url" 
-                        placeholder="Ej: https://www.ejemplo.com" 
-                        required
-                    >
-                    <small class="form-text text-muted">
-                        Ingresa un URL válido.
-                    </small>
-                </div>
-            </div>
-            <div class="mb-3">
-                <label for="mensaje" class="form-label">Mensaje</label>
-                <textarea class="form-control" id="mensaje" name="mensaje" rows="4" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Enviar</button>
-        </form>
-    </div>
-</section>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </div>
+    </section>
 
     <!-- Scripts de Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
